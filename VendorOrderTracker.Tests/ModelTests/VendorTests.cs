@@ -1,11 +1,11 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName.Models;
+using VendorOrderTracker.Models;
 
-namespace ProjectName.Tests
+namespace VendorOrderTracker.Tests
 {
   [TestClass]
-  public class ClassNameTests // : IDisposable
+  public class VendorTests // : IDisposable
   {
     // public void Dispose()
     // {
