@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace VendorOrderTracker.Controllers
 {
-  public class VerdorsController : Controller
+  public class VendorsController : Controller
   {
     [HttpGet("/vendors")]
     public ActionResult Index()
