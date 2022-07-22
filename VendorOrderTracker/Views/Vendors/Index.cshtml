@@ -23,7 +23,7 @@
         @foreach(Vendor vendor in Model)
         {
           <tr>
-            <td>@vendor.Name</td>
+            <td><a href="/vendors/@vendor.Id">@vendor.Name</a></td>
             <td>@vendor.Orders.Count</td>
           </tr>
         }

@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@using VendorOrderTracker.Models;
+
+<div class="container">
+  <div class="jumbotron text-center">
+    <h2>@Model["vendor"].Name's orders</h2>
+  </div>
+
+  @if (Model["orders"].Count == 0)
+  {
+    <p>There are no orders yet.</p>
+  }
+
+  <ol>
+    @foreach (Order order in @Model["orders"])
+    {
+      <li></li>
+    }
+  </ol>
+
+  <p><a href="/vendors">Back to vendors list</a></p>
+  <p><a href="/">Back home</a></p>
+</div>
