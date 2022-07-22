@@ -12,11 +12,11 @@ namespace VendorOrderTracker.Tests
     //   ClassName.ClearAll();
     // }
 
-    // [TestMethod]
-    // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-    // {
-    //   // any necessary logic to prep for test; instantiating new classes, etc.
-    //   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-    // }
+    [TestMethod]
+    public void VendorContructor_CreateInstanceOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("Ben", "Description");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
   }
 }
