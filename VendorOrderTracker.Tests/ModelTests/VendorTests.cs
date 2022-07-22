@@ -44,7 +44,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-    public void Find_ReturnsCorrectCategory_Category()
+    public void Find_ReturnsCorrectVendor_Vendor()
     {
       string name1 = "Ben's Cafe";
       string name2 = "Suzie's Cafe";
@@ -53,5 +53,17 @@ namespace VendorOrderTracker.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      Order newOrder = new Order("Ben", "Title", "Description", 5, "July 22nd, 2022");
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "Ben's Cafe";
+      Vendor newVendor = new Vendor(name);
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }    
   }
 }
