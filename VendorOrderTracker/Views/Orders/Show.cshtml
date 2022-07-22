@@ -4,11 +4,27 @@
 
 <div class="container">
   <div class="jumbotron text-center">
-    <h1>Order detail: </h1>
+    <h1>Order detail</h1>
   </div>
 
-  <h2>@Model["order"].Description</h2>
   <h3>Vendor: @Model["vendor"].Name</h3>
+
+  <table class="table">
+    <thead>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Date</th>
+    </thhead>
+    <tbody>
+      <tr>
+        <td>@Model["order"].Title</td>
+        <td>@Model["order"].Description</td>
+        <td>@Model["order"].Price</td>
+        <td>@Model["order"].Date</td>
+      </tr>
+    </tbody>
+  </table>
 
   <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
   <a href='/vendors'>View all vendors</a>
