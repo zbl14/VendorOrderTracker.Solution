@@ -1,8 +1,8 @@
-# {C# Application Name}
+# Pierre's Vendor Managment
 
 #### By _**Zhibin Liang**_  
 
-#### _{Brief description of application}_  
+#### _Simple Bakery CRM Tool_  
 
 ---
 ## Technologies Used
@@ -11,11 +11,12 @@
 * _.NET_
 * _HTML_
 * _CSS_
+* _ASP.NET Core MVC_
 
 ---
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+Pierre's Vendor Management is an simple CRM tool designed for Pierre's Bakery. The tool allows the manager to create a list of vendors and their orders.
 
 ---
 ## Setup/Installation Requirements
@@ -26,7 +27,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 <li>Clone the repo
 
 ```
-$ git clone
+$ git clone https://github.com/zbl14/VendorOrderTracker.Solution.git
 ```
 </li>
 </details>
@@ -34,9 +35,9 @@ $ git clone
 <details>
 <summary><strong>To Run</strong></summary>
 Navigate to  
-   <pre>ProjectName.Solution
-   ├── <strong>ProjectName</strong>
-   └── ProjectName.Tests</pre>
+   <pre>VendorOrderTracker.Solution
+   ├── <strong>VendorOrderTracker</strong>
+   └── VendorOrderTracker.Tests</pre>
 
 ```
 $ dotnet restore
@@ -49,9 +50,9 @@ $ dotnet run
 <details>
 <summary><strong>For Testing</strong></summary>
 Navigate to  
-    <pre>ProjectName.Solution
-    ├── ProjectName
-    └── <strong>ProjectName.Tests</strong></pre>
+    <pre>VendorOrderTracker.Solution
+    ├── VendorOrderTracker
+    └── <strong>VendorOrderTracker.Tests</strong></pre>
 
 ```
 $ dotnet restore
@@ -68,8 +69,7 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 ---
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No Known Bugs
 
 ## License
 MIT
