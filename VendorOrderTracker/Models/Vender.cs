@@ -9,13 +9,23 @@ namespace VendorOrderTracker.Models
     public List<Order> Orders { get; set; }
     private static List<Vendor> _instances = new List<Vendor> {};
 
-    public Vendor(string name, string description)
+    public Vendor(string name)
     {
       Name = name;
-      Description = description;
       Orders = new List<Order> {};
       _instances.Add(this);
     }
+
+    public Vendor (string name, string description) : this (name)
+    {
+      Description = description;
+    }
+
+    // public static Vendor Find(int searchId)
+    // {
+    //   int index;
+    //   for
+    // }
   
     public static List<Vendor> GetAll()
     {
