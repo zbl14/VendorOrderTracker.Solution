@@ -5,8 +5,13 @@ using VendorOrderTracker.Models;
 namespace VendorOrderTracker.Tests
 {
   [TestClass]
-  public class OrderTests 
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }    
+    
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfOrder_Order()
     {
@@ -22,5 +27,23 @@ namespace VendorOrderTracker.Tests
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }
+    
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      Order newOrder = new Order("Title", "Description", 5, "July 22nd, 2022");
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      Order newOrder1 = new Order("Title", "Description", 5, "July 22nd, 2022");
+      Order newOrder2 = new Order("Title", "Description", 10, "July 22nd, 2022");
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
+
   }
 }
