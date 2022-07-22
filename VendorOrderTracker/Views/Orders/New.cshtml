@@ -8,18 +8,19 @@
   </div>
   <form action="/vendors/@Model.Id/orders" method="post">
     <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-    <div class="form-group">
+    <div>
       <label for="orderTitle">Title</label>
       <input id="orderTitle" name="orderTitle" type="text" placeholder="Enter Order Title" required>
     </div>
-    <div class="form-group">
+    <div>
       <label for="orderTitle">Description</label>
+      <br>
       <textarea rows="5" cols="50" id="description" name="description" type="text" placeholder="Enter Order Description"></textarea>
     </div>
-    <div class="form-group">
+    <div>
       <label for="orderPrice">Price</label>
       <input id="orderPrice" name="orderPrice" type="text" placeholder="Enter Order Price" required>
-    <div class="form-group">
+    <div>
       <label for="orderDate">Date</label>
       <input id="orderDate" name="orderDate" type="text" placeholder="Enter Order Date" required>
     </div>
