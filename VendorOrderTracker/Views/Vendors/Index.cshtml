@@ -12,11 +12,22 @@
     <button type="button" class="btn btn-outline-primary">
       <a href="/vendors/new">New vendor</a>
     </button>
-    <table>
-      <tr>
-        <th>Vendor</th>
-        <th>Number of Orders</th>
-      </tr>
+    <br>
+    <br>
+    <table class="table">
+      <thead>
+        <th scope="col">Vendor</th>
+        <th scope="col">Number of Orders</th>
+      </thhead>
+      <tbody>
+        @foreach(Vendor vendor in Modle)
+        {
+          <tr>
+            <td>@vendor.Name</td>
+            <td>@vendor.Orders.Count</td>
+          </tr>
+        }
+      </tbody>
     </table>
   </div>
 </div>
