@@ -1,6 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorOrderTracker.Models;
+using System.Collections.Generic;
 
 namespace VendorOrderTracker.Tests
 {
@@ -28,5 +29,19 @@ namespace VendorOrderTracker.Tests
       string reslut = newVendor.Name;
       Assert.AreEqual(name, reslut);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnListOfVendors_List()
+    {
+      string name1 = "Ben's Cafe";
+      string name2 = "Suzie's Cafe";
+      string description = "100 pastries";
+      Vendor newVendor1 = new Vendor(name1, description);
+      Vendor newVendor2 = new Vendor(name2, description);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> reslut = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, reslut);
+    }
+
   }
 }
