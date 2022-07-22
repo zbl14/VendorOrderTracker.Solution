@@ -5,18 +5,22 @@ using VendorOrderTracker.Models;
 namespace VendorOrderTracker.Tests
 {
   [TestClass]
-  public class OrderTests // : IDisposable
+  public class OrderTests 
   {
-    // public void Dispose()
-    // {
-    //   ClassName.ClearAll();
-    // }
-
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfOrder_Order()
     {
       Order newOrder = new Order("Title","Description", 5, "July 22nd, 2022");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+    
+    [TestMethod]
+    public void GetPrice_ReturnPrice_Price()
+    {
+      int price = 5;
+      Order newOrder = new Order("Title","Description", price, "July 22nd, 2022");
+      int result = newOrder.Price;
+      Assert.AreEqual(price, result);
     }
   }
 }
