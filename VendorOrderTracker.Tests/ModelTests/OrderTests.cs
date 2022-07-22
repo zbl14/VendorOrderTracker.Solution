@@ -13,10 +13,10 @@ namespace VendorOrderTracker.Tests
     // }
 
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void OrderConstructor_CreateInstanceOfOrder_Order()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      Order newOrder = new Order("Title","Description", 5, "July 22nd, 2022");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
   }
 }
