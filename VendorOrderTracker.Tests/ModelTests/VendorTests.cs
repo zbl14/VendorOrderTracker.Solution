@@ -6,12 +6,12 @@ using System.Collections.Generic;
 namespace VendorOrderTracker.Tests
 {
   [TestClass]
-  public class VendorTests // : IDisposable
+  public class VendorTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   ClassName.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
 
     [TestMethod]
     public void VendorContructor_CreateInstanceOfVendor_Vendor()
