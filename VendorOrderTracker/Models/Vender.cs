@@ -21,11 +21,10 @@ namespace VendorOrderTracker.Models
       Description = description;
     }
 
-    // public static Vendor Find(int searchId)
-    // {
-    //   int index;
-    //   for
-    // }
+    public static Vendor Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
   
     public static List<Vendor> GetAll()
     {
