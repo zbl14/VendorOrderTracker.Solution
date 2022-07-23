@@ -16,7 +16,8 @@
     <br>
     <table class="table">
       <thead>
-        <th scope="col">Vendor</th>
+        <th scope="col">Vendor Name</th>
+        <th scope="col">Description</th>
         <th scope="col">Number of Orders</th>
       </thhead>
       <tbody>
@@ -24,6 +25,7 @@
         {
           <tr>
             <td><a href="/vendors/@vendor.Id">@vendor.Name</a></td>
+            <td>@vendor.Description</td>
             <td>@vendor.Orders.Count</td>
           </tr>
         }
