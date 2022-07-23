@@ -4,7 +4,7 @@
 
 <div class="container">
   <div class="jumbotron text-center">
-    <h1>Order detail</h1>
+    <h2>Order detail</h2>
   </div>
 
   <h3>Vendor: @Model["vendor"].Name</h3>
@@ -26,6 +26,7 @@
     </tbody>
   </table>
 
-  <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-  <a href='/vendors'>View all vendors</a>
+  <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
+  <p><a href='/vendors/@Model["vendor"].Id'>Back to @Model["vendor"].Name's order list</a></p>
+  <p><a href='/vendors'>View all vendors</a></p>
 </div>
